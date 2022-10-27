@@ -1,42 +1,13 @@
-const choosenLocation = document.querySelector(".mintaqa__city");
-const date = document.querySelector(".time__day");
-const time = document.querySelector(".time__hour");
-const container = document.querySelector(".container");
+const btn  = document.querySelector(".start")
+const text = document.querySelector(".heading")
+const input = document.querySelector("input")
 
-(() => {
-    fetch("https://islomapi.uz/api/present/day?region=Toshkent")
-        .then(response => response.json())
-        .then(data => render(data),)
-})()
+btn.addEventListener("click", e => {
+    text.style.display = "block";
 
-function render(data) {
-    choosenLocation.innerHTML = data.region
-    date.innerHTML = data.date
-    time.innerHTML = data.weekday
-
-    for (const info in data) {
-        if (typeof data[info] == 'object') {
-            Object.entries(data[info]).forEach(name => {
-                console.log(name);
-                const div = document.createElement("div")
-                div.className = "box"
-                
-                const h2 = document.createElement("h2")
-                h2.innerHTML = name[0]
-
-                const imgEl = document.createElement("img")
-                imgEl.setAttribute("src", "./images/saharlik.svg")
-
-                const time = document.createElement('strong')
-                time.innerHTML = name[1]
-
-                div.append(h2, imgEl, time)
-                container.append(div)
-            })
+    setTimeout(() => {
+        if (input.value !== text.innerHTML) {
+            input.setAttribute("disabled", "true")
         }
-    }
-}
-
-
-
-
+    }, 5000);
+})
