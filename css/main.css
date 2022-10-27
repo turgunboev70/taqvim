@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/background-mintaqa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Jost', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header>.text {
+    color: #fff;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 46px;
+}
+
+header>.horizontal {
+    margin: 30px 0;
+    width: 800px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+header>.header__wrapper>#choose {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+header>.header__wrapper>#location {
+    margin-left: 60px;
+    background: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    border: 1px solid #fff;
+}
+
+.wrapper {
+    margin-top: 50px;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.wrapper>.mintaqa>.mintaqa__description {
+    color: #fff;
+}
+
+.wrapper>.mintaqa>.mintaqa__city {
+    color: yellow;
+}
+.wrapper > .time > i {
+    color: #fff;
+}
+
+.wrapper > .time > .time__day {
+    color: yellow;
+    margin: 0 20px;
+    margin-left: 10px;
+}
+
+.wrapper > .time > .time__hour {
+    color: #fff;
+}
+.container {
+    display: flex;
+    width: 90%;
+    margin: 100px auto;
+}
+.container > .box {
+    width: 200px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
